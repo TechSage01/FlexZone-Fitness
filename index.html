@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexZone Fitness</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./images/remove logo.png" alt="FlexZone Fitness Logo">
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <!-- <li><a href="#">Home</a></li> -->
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Spa</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#" class="btn-member">Become a Member</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+      <div class="menu-overlay" id="menuOverlay"></div>
+
+  </nav>
+</header>
+
+    <div class="p-1">The Future of Men and Women's Health is Here. Introducing <strong>FZF</strong> ARC. <a href=""> Learn More</a></div>
+
+    <section class="hero-section">
+        <div class="hero-div">
+            <video src="./videos/mckinsey_fast-start_HOMEPAGE-HERO_1440x900.mp4" autoplay loop muted class="video-1"></video>
+        </div>
+    </section>
+    <script>
+        const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+    const overlay = document.getElementById("menuOverlay");
+
+    function toggleMenu() {
+        navLinks.classList.toggle("open");
+        hamburger.classList.toggle("active");
+        overlay.classList.toggle("active");
+    }
+
+    hamburger.addEventListener("click", toggleMenu);
+    overlay.addEventListener("click", toggleMenu);
+
+    </script>
+</body>
+</html>

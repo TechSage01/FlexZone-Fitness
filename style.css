@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+/* ===== HEADER / NAV STYLE ===== */
+header {
+    width: 100%;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 90%;
+    margin: auto;
+}
+
+.logo img {
+    width: 140px;
+}
+
+/* MENU LINKS */
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ff1b1b;
+}
+
+/* BUTTON */
+.btn-member {
+    background: #ff2020;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+.btn-member:hover {
+    background-color: #c40000;
+    color: white;
+}
+
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 200;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: 0.4s ease;
+}
+
+/* Turn to X when active */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ===== OVERLAY ===== */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(3px);
+    z-index: 90;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* ===== RESPONSIVENESS ===== */
+@media (max-width: 900px) {
+    .hamburger {
+        display: flex;
+        /* width: 100%; */
+    }
+
+    .nav-links {
+        position: fixed;
+        right: 200px;
+        /* left: 20px; */
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        background: #111;
+        flex-direction: column;
+        justify-content: center;
+        gap: 35px;
+        transition: 0.4s ease;
+        z-index: 150;
+    }
+
+    .nav-links.open {
+        right: 0;
+    }
+    
+    .nav-links li a {
+        /* border: 2px solid red; */
+        margin-left: 20px;
+    }
+    .btn-member {
+        padding: 14px 28px;
+        font-size: 22px;
+        width: 100%;
+    }
+}
+
+.p-1 {
+    padding-top: 85px; 
+    padding-bottom: 5px;
+    text-align: center;
+    background: #e1d9d9;
+    border-bottom: 2px solid #eee;
+    /* font-size: 22px; */
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    color: #000;
+    line-height: 1.4;
+}
+
+.p-1 strong {
+    color: #ff2020;
+    font-weight: 900;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 0px 2px 6px rgba(255, 32, 32, 0.2);
+}
+
+.p-1 a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #ff2020;
+    border-radius: 6px;
+    padding: 5px 26px;
+    font-size: 18px;
+    transition: 0.3s ease;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.p-1 a:hover {
+    background-color: #c40000;
+}
+
+/* ✅ RESPONSIVE STYLES */
+@media (max-width: 768px) {
+    .p-1 {
+        font-size: 18px;
+        padding: 110px 12px 25px;
+    }
+
+    .p-1 a {
+        margin-top: 10px;
+        margin-left: 0;
+        font-size: 16px;
+        padding: 8px 20px;
+        display: block; /* button goes below text */
+    }
+}
+
+@media (max-width: 480px) {
+    .p-1 {
+        font-size: 16px;
+        padding: 100px 10px 25px;
+    }
+
+    .p-1 a {
+        width: 100%;
+        max-width: 260px;
+        margin: 12px auto 0;
+    }
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+    /* background: url(./videos/mckinsey_fast-start_HOMEPAGE-HERO_1440x900.mp4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; */
+    /* border: 2px solid green; */
+}
+.video-1 {
+    /* padding-top: 80px; */
+    width: 100%;
+    position: relative;
+}
