@@ -6,6 +6,10 @@
     <title>FlexZone Fitness</title>
     <link rel="shortcut icon" href="./images/remove logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./otherpages.css/additional-styles.css">
+    <link rel="stylesheet" href="./otherpages.css/footer-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <header>
@@ -99,7 +103,7 @@
                     <p class="benefit-text">Professional guidance to help you achieve your fitness goals safely and effectively.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-icon">🎯 </div>
                     <h3 class="benefit-title">Custom Programs</h3>
                     <p class="benefit-text">Personalized workout plans tailored to your specific needs and goals.</p>
                 </div>
@@ -132,8 +136,18 @@
         </div>
     </section>
     <!-- Back to Top Button -->
-    <div class="back-to-top" id="backToTop">
-        <i>↑</i>
+    <div class="fixed bottom-5 right-10 z-50 opacity-0 invisible transition-all duration-300 cursor-pointer group" id="backToTop">
+        <div class="bg-red-600 hover:bg-red-700 w-10 h-10 rounded-full flex items-center justify-center text-white shadow-lg group-hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+            <span class="text-2xl">↑</span>
+        </div>
+        <span class="absolute right-12 top-1/2 -translate-y-1/2 bg-black/75 text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap mr-2">Back to Top</span>
+    </div>
+    <!-- Scroll to Bottom Button -->
+    <div class="fixed bottom-5 left-10 z-50 opacity-0 invisible transition-all duration-300 cursor-pointer group" id="scrollBottom">
+        <div class="bg-red-600 hover:bg-red-700 w-10 h-10 rounded-full flex items-center justify-center text-white shadow-lg group-hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+            <span class="text-2xl transform rotate-180">↑</span>
+        </div>
+        <span class="absolute left-12 top-1/2 -translate-y-1/2 bg-black/75 text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap ml-2">Scroll to Bottom</span>
     </div>
        <section>
          <figure class="ResponsiveVideo_responsive-video__NsIvk ExploreClubs_media__PHz7o">
@@ -154,8 +168,296 @@
         </figure>
        </section>
        <section class="sign">
-        <img src="./images/" alt="">
+            <div class="sign-container">
+                <div class="sign-content">
+                    <h2 class="sign-title">Sign Up Today</h2>
+                    <div class="sign-benefits">
+                        <div class="sign-benefit">
+                            <span class="benefit-check">✓</span>
+                            <span>No Long-Term Contracts</span>
+                        </div>
+                        <div class="sign-benefit">
+                            <span class="benefit-check">✓</span>
+                            <span>Free Fitness Assessment</span>
+                        </div>
+                        <div class="sign-benefit">
+                            <span class="benefit-check">✓</span>
+                            <span>Access to All Equipment</span>
+                        </div>
+                        <div class="sign-benefit">
+                            <span class="benefit-check">✓</span>
+                            <span>Personal Training Sessions</span>
+                        </div>
+                    </div>
+                    <div class="sign-price">
+                        <span class="price-from">From</span>
+                        <span class="price-amount">$49.99</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <a href="#" class="sign-button">Join Now</a>
+                    <p class="sign-note">First Week Free - No Credit Card Required</p>
+                </div>
+                <div class="sign-image">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
        </section>
+
+       <!-- Trainers Section -->
+       <section class="trainers-section">
+            <div class="container">
+                <h2 class="section-title">Our Expert Trainers</h2>
+                <div class="trainers-grid">
+                    <div class="trainer-card">
+                        <img src="./images/imgi_51_Elijah.png" alt="Trainer John">
+                        <div class="trainer-info">
+                            <h3>John Smith</h3>
+                            <p>Strength & Conditioning</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link twitter" aria-label="X">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="20" height="20" fill="currentColor">
+                                        <path d="M714.163 519.284L1160.89 0H1052.72L666.163 450.002L360.356 0H0L468.632 681.821L0 1226.98H108.175L517.363 756.603L839.644 1226.98H1200L714.137 519.284H714.163ZM572.879 694.051L523.923 623.19L147.289 80.1305H309.909L611.917 518.903L660.872 589.764L1053.17 1146.85H890.55L572.879 694.077V694.051Z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-link youtube">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-card">
+                        <img src="./images/imgi_10_IMG_9281-scaled.jpeg" alt="Trainer Sarah">
+                        <div class="trainer-info">
+                            <h3>Sarah Johnson</h3>
+                            <p>Yoga & Flexibility</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link twitter" aria-label="X">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="20" height="20" fill="currentColor">
+                                        <path d="M714.163 519.284L1160.89 0H1052.72L666.163 450.002L360.356 0H0L468.632 681.821L0 1226.98H108.175L517.363 756.603L839.644 1226.98H1200L714.137 519.284H714.163ZM572.879 694.051L523.923 623.19L147.289 80.1305H309.909L611.917 518.903L660.872 589.764L1053.17 1146.85H890.55L572.879 694.077V694.051Z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-link youtube">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-card">
+                        <img src="./images/imgi_49_IMG_6703-scaled.jpeg" alt="Trainer Mike">
+                        <div class="trainer-info">
+                            <h3>Mike Williams</h3>
+                            <p>CrossFit Expert</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link twitter" aria-label="X">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="20" height="20" fill="currentColor">
+                                        <path d="M714.163 519.284L1160.89 0H1052.72L666.163 450.002L360.356 0H0L468.632 681.821L0 1226.98H108.175L517.363 756.603L839.644 1226.98H1200L714.137 519.284H714.163ZM572.879 694.051L523.923 623.19L147.289 80.1305H309.909L611.917 518.903L660.872 589.764L1053.17 1146.85H890.55L572.879 694.077V694.051Z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-link youtube">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <h2 class="section-title">Our Classes</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./images/imgi_4_IMG_9455-scaled.jpeg" alt="Yoga Class">
+                    <div class="gallery-overlay">
+                        <h3>Yoga</h3>
+                        <p>Find your inner peace</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/imgi_4_IMG_9485-scaled.jpeg" alt="CrossFit">
+                    <div class="gallery-overlay">
+                        <h3>CrossFit</h3>
+                        <p>Push your limits</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/imgi_11_IMG_9393-scaled.jpeg" alt="Boxing">
+                    <div class="gallery-overlay">
+                        <h3>Boxing</h3>
+                        <p>Release your power</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/imgi_29_IMG_9184-2048x1365.jpeg" alt="Strength Training">
+                    <div class="gallery-overlay">
+                        <h3>Strength Training</h3>
+                        <p>Build your strength</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">What Our Members Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="Client 1">
+                        <blockquote>
+                            "FlexZone Fitness changed my life! The trainers are amazing and the community is so supportive."
+                        </blockquote>
+                        <cite>- Emily R.</cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="Client 2">
+                        <blockquote>
+                            "Best gym I've ever been to. The facilities are top-notch and the atmosphere is incredible."
+                        </blockquote>
+                        <cite>- James M.</cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Client 3">
+
+                        <blockquote>
+                            "I've achieved results I never thought possible. The personal training here is exceptional!"
+                        </blockquote>
+                        <cite>- Sofia L.</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="newsletter-section">
+                    <h3>Join Our Newsletter</h3>
+                    <p>Subscribe to get special offers, free giveaways, and training tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-content">
+            <!-- LOGO + INTRO -->
+            <div class="footer-section">
+                <img src="./images/remove logo.png" alt="FlexZone Fitness Logo" class="footer-logo">
+                <p>Welcome to <strong>FlexZone Fitness</strong> where strength meets style.
+                Transform your body, elevate your mindset, and live fit every day.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./classes.html">Classes</a></li>
+                    <li><a href="./schedule.html">Schedule</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./membership.html">Membership</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT INFO -->
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Flex Street, Lagos, Nigeria</span>
+                        <a href="https://goo.gl/maps" target="_blank" class="map-link">Get Directions</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+234 801 234 5678</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@flexzonefitness.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- HOURS + GALLERY -->
+            <div class="footer-section">
+                <h3>Opening Hours</h3>
+                <ul class="hours-list">
+                    <li>
+                        <span class="day">Monday - Friday: </span>
+                        <span class="hours">6:00 AM - 12:00 AM</span>
+                    </li>
+                    <li>
+                        <span class="day">Saturday:</span>
+                        <span class="hours">7:00 AM - 10:00 PM</span>
+                    </li>
+                    <li>
+                        <span class="day">Sunday:</span>
+                        <span class="hours">8:00 AM - 8:00 PM</span>
+                    </li>
+                </ul>
+                <div class="footer-gallery">
+                    <img src="./images/imgi_4_IMG_9485-scaled.jpeg" alt="Gym Image 1">
+                    <img src="./images/imgi_11_IMG_9393-scaled.jpeg" alt="Gym Image 2">
+                    <img src="./images/imgi_29_IMG_9184-2048x1365.jpeg" alt="Gym Image 3">
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM BAR -->
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2025 FlexZone Fitness | Made with 💪 by TechSage</p>
+                <ul class="bottom-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <script>
         const hamburger = document.getElementById("hamburger");
@@ -193,9 +495,11 @@
     // Show button when scrolling down
     window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
-            backToTopButton.classList.add('visible');
+            backToTopButton.classList.remove('opacity-0', 'invisible');
+            backToTopButton.classList.add('opacity-100', 'visible');
         } else {
-            backToTopButton.classList.remove('visible');
+            backToTopButton.classList.add('opacity-0', 'invisible');
+            backToTopButton.classList.remove('opacity-100', 'visible');
         }
     });
     
@@ -203,6 +507,33 @@
     backToTopButton.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Scroll to Bottom Button functionality
+    const scrollBottomButton = document.getElementById('scrollBottom');
+    
+    // Show button when not at bottom
+    window.addEventListener('scroll', () => {
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Show button when not at bottom and not at top
+        if (scrollTop > 300 && scrollTop < (documentHeight - windowHeight - 100)) {
+            scrollBottomButton.classList.remove('opacity-0', 'invisible');
+            scrollBottomButton.classList.add('opacity-100', 'visible');
+        } else {
+            scrollBottomButton.classList.add('opacity-0', 'invisible');
+            scrollBottomButton.classList.remove('opacity-100', 'visible');
+        }
+    });
+    
+    // Smooth scroll to bottom when clicked
+    scrollBottomButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: document.documentElement.scrollHeight,
             behavior: 'smooth'
         });
     });

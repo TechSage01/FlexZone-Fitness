@@ -694,64 +694,7 @@ header {
     }
 }
 
-/* ===== BACK TO TOP BUTTON ===== */
-.back-to-top {
-    position: fixed;
-    bottom: 5px;
-    /* left: 600px; */
-    right: 10px;
-    width: 50px;
-    height: 50px;
-    background: transparent;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 25px;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 999;
-    box-shadow: 0 2px 10px rgba(255, 32, 32, 0.3);
-}
 
-.back-to-top.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.back-to-top:hover {
-    background: #d40000;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(255, 32, 32, 0.4);
-}
-
-.back-to-top i {
-    transform: translateY(-2px);
-    display: inline-block;
-}
-
-@media (max-width: 768px) {
-    .back-to-top {
-        width: 45px;
-        height: 45px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 22px;
-    }
-}
-
-@media (max-width: 480px) {
-    .back-to-top {
-        width: 40px;
-        height: 40px;
-        bottom: 15px;
-        right: 15px;
-        font-size: 20px;
-    }
-}
 
 
 /* ===== AFTER-SECTION STYLES ===== */
@@ -1236,3 +1179,237 @@ header {
         height: 30px;
     }
 }
+
+/* Sign Section Styles */
+.sign {
+    padding: 80px 0;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.sign-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.sign-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeInLeft 0.8s ease forwards;
+}
+
+.sign-title {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(255, 32, 32, 0.3);
+}
+
+.sign-benefits {
+    margin-bottom: 30px;
+}
+
+.sign-benefit {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 0.8s ease forwards;
+}
+
+.sign-benefit:nth-child(1) { animation-delay: 0.2s; }
+.sign-benefit:nth-child(2) { animation-delay: 0.4s; }
+.sign-benefit:nth-child(3) { animation-delay: 0.6s; }
+.sign-benefit:nth-child(4) { animation-delay: 0.8s; }
+
+.benefit-check {
+    color: #ff2020;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.sign-price {
+    margin: 40px 0;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards 1s;
+}
+
+.price-from {
+    font-size: 1.2rem;
+    display: block;
+    opacity: 0.8;
+}
+
+.price-amount {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ff2020;
+    text-shadow: 0 0 20px rgba(255, 32, 32, 0.3);
+}
+
+.price-period {
+    font-size: 1.6rem;
+    opacity: 0.8;
+}
+
+.sign-button {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0;
+    background: #ff2020;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards 1.2s;
+    box-shadow: 0 4px 15px rgba(255, 32, 32, 0.3);
+}
+
+.sign-button:hover {
+    background: #d40000;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 32, 32, 0.4);
+}
+
+.sign-note {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards 1.4s;
+}
+
+.sign-image {
+    background: url('./images/Punch.webp') no-repeat center center;
+    background-size: cover;
+    border-radius: 20px;
+    position: relative;
+    min-height: 400px;
+    opacity: 0;
+    transform: translateX(20px);
+    animation: fadeInRight 0.8s ease forwards 0.5s;
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 32, 32, 0.3),
+        rgba(0, 0, 0, 0.5)
+    );
+    border-radius: 20px;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .sign-container {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .sign-image {
+        height: 300px;
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .sign {
+        padding: 60px 0;
+    }
+
+    .sign-content {
+        padding: 30px;
+    }
+
+    .sign-title {
+        font-size: 2rem;
+    }
+
+    .sign-benefit {
+        font-size: 1rem;
+    }
+
+    .price-amount {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sign {
+        padding: 40px 0;
+    }
+
+    .sign-content {
+        padding: 20px;
+    }
+
+    .sign-title {
+        font-size: 1.75rem;
+    }
+
+    .sign-benefit {
+        font-size: 0.9rem;
+    }
+
+    .price-amount {
+        font-size: 2.5rem;
+    }
+
+    .sign-button {
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+}
+
+/* SECTION SIGN  */
+/* .sign {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    background-image: url(./images/Punch.webp);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
