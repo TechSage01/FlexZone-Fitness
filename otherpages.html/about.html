@@ -6,6 +6,7 @@
   <title>About FlexZone Fitness | Gym & Fitness Center Lagos</title>
   <link rel="stylesheet" href="../otherpages.css/about.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
   <!-- HERO SECTION -->
@@ -336,10 +337,10 @@
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./about.html">About Us</a></li>
-            <li><a href="#classes">Classes</a></li>
-            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="../otherpages.html/about.html">About Us</a></li>
+            <li><a href="../otherpages.html/services.html">Services</a></li>
+            <li><a href="../otherpages.html/">Schedule</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -380,6 +381,14 @@
     </div>
     </footer>
 
+  <!-- BACK TO TOP BUTTON -->
+  <div class="fixed bottom-5 left-1/2 transform -translate-x-1/2 z-50 opacity-0 invisible transition-all duration-300 cursor-pointer group" id="backToTop">
+    <div class="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transform transition-transform duration-300 group-hover:scale-110">
+      <i class="fas fa-chevron-up text-xl"></i>
+    </div>
+    <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 bg-red-600 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">Back to top</span>
+  </div>
+
   <script>
     // FAQ Toggle with Smooth Animation
     document.querySelectorAll('.faq-toggle').forEach((button) => {
@@ -399,6 +408,28 @@
         item.classList.toggle('open', !isOpen);
         button.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
       });
+    });
+
+    // Back to Top Button functionality
+    const backToTopButton = document.getElementById('backToTop');
+    
+    // Show button when scrolling down
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.remove('opacity-0', 'invisible');
+            backToTopButton.classList.add('opacity-100', 'visible');
+        } else {
+            backToTopButton.classList.add('opacity-0', 'invisible');
+            backToTopButton.classList.remove('opacity-100', 'visible');
+        }
+    });
+    
+    // Smooth scroll to top when clicked
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
   </script>
 </body>

@@ -1514,3 +1514,30 @@ body {
   border-width: 0;
 }
 
+#backToTop {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#backToTop.visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+#backToTop.invisible {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+#backToTop .fa-chevron-up {
+  animation: bounceUp 1s ease-in-out infinite;
+}
+
+@keyframes bounceUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
