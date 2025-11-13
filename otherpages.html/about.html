@@ -4,13 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About FlexZone Fitness | Gym & Fitness Center Lagos</title>
+  <link rel="shortcut icon" href="../images/remove logo.png" type="image/x-icon">
   <link rel="stylesheet" href="../otherpages.css/about.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
+  
+
   <!-- HERO SECTION -->
   <section class="hero-section">
+    <header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../images/remove logo.png" alt="FlexZone Fitness Logo"> <span>FlexZone Fitness</span>
+        <!-- <p></p> -->
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./services.html">Services</a></li>
+      <li><a href="./otherpages.html/gallery.html">Gallery</a></li>
+      <li><a href="./otherpages.html/spa.html">Spa</a></li>
+      <li><a href="./otherpages.html/contact.html">Contact</a></li>
+      <li><a href="#" class="btn-member">Become a Member</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+      <div class="menu-overlay" id="menuOverlay"></div>
+
+  </nav>
+</header>
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="container hero-content">
@@ -390,6 +420,18 @@
   </div>
 
   <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+    const overlay = document.getElementById("menuOverlay");
+
+    function toggleMenu() {
+        navLinks.classList.toggle("open");
+        hamburger.classList.toggle("active");
+        overlay.classList.toggle("active");
+    }
+
+    hamburger.addEventListener("click", toggleMenu);
+    overlay.addEventListener("click", toggleMenu);
     // FAQ Toggle with Smooth Animation
     document.querySelectorAll('.faq-toggle').forEach((button) => {
       button.addEventListener('click', () => {
