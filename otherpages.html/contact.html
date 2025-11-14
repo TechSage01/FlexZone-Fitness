@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact | FlexZone Fitness</title>
+  <link rel="stylesheet" href="../otherpages.css/contact.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <!-- reuse your site header / nav here or include as a partial -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../images/remove logo.png" alt="FlexZone Fitness Logo">
+        <span>FlexZone Fitness</span>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./spa.html">Spa</a></li>
+        <li><a href="./contact.html" class="active">Contact</a></li>
+        <li><a href="#" class="btn-member">Become a Member</a></li>
+      </ul>
+
+      <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu-overlay" id="menuOverlay"></div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero-section" style="min-height:36vh; display:flex; align-items:center; justify-content:center;">
+      <div class="hero-bg" style="background-position:center; filter:brightness(.45);"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content" style="max-width:1000px; text-align:left;">
+        <h1 class="hero-title" style="color:var(--text-light); font-size:2.2rem;">Get in touch</h1>
+        <p class="hero-subtitle" style="color:var(--text-muted); margin:6px 0 12px;">Questions, memberships, classes or a gym tour — we’ve got you.</p>
+        <p style="color:var(--text-muted); margin-bottom:18px;">Use the form to message us, or reach us directly via phone or email shown below.</p>
+        <div style="display:flex; gap:12px;">
+          <a class="btn btn-primary" href="#contact-form">Message Us</a>
+          <a class="btn btn-secondary" href="#visit">Visit Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FORM + DETAILS -->
+    <section class="contact-section" style="padding:60px 20px;">
+      <div class="container" style="max-width:1200px; margin:0 auto;">
+        <div class="contact-grid" style="display:grid; grid-template-columns: 1fr 420px; gap:32px; align-items:start;">
+          <!-- Form column -->
+          <div>
+            <h2 class="section-title">Contact Form</h2>
+
+            <form id="contact-form" class="contact-form" novalidate enctype="multipart/form-data" aria-labelledby="contact-form-title">
+              <input type="hidden" name="page" value="contact-page">
+
+              <div class="form-row">
+                <label for="name">Full name <span aria-hidden="true" style="color:var(--accent)">*</span></label>
+                <input id="name" name="name" type="text" placeholder="Your full name" required>
+                <div class="field-error" id="err-name" aria-live="polite"></div>
+              </div>
+
+              <div class="form-row two-col">
+                <div>
+                  <label for="email">Email <span aria-hidden="true" style="color:var(--accent)">*</span></label>
+                  <input id="email" name="email" type="email" placeholder="you@example.com" required>
+                  <div class="field-error" id="err-email" aria-live="polite"></div>
+                </div>
+                <div>
+                  <label for="phone">Phone</label>
+                  <input id="phone" name="phone" type="tel" placeholder="+234 800 000 0000" pattern="[\+\d\s\-]+" aria-describedby="phoneHelp">
+                  <small id="phoneHelp" class="hint">Optional — helpful for quick replies</small>
+                  <div class="field-error" id="err-phone" aria-live="polite"></div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="interest">I am interested in</label>
+                <select id="interest" name="interest">
+                  <option value="">General enquiry</option>
+                  <option value="trial">Free trial</option>
+                  <option value="membership">Membership plans</option>
+                  <option value="classes">Group classes</option>
+                  <option value="corporate">Corporate wellness</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" type="text" placeholder="Short subject">
+              </div>
+
+              <div class="form-row">
+                <label for="message">Message <span aria-hidden="true" style="color:var(--accent)">*</span></label>
+                <textarea id="message" name="message" rows="6" placeholder="Tell us how we can help" required></textarea>
+                <div class="field-error" id="err-message" aria-live="polite"></div>
+              </div>
+
+              <div class="form-row">
+                <label for="file">Attach (optional)</label>
+                <input id="file" name="file" type="file" accept="image/*,.pdf">
+                <small class="hint">ID, screenshot, or medical note (max 5 MB)</small>
+                <div class="field-error" id="err-file" aria-live="polite"></div>
+              </div>
+
+              <div class="form-row" style="display:flex; gap:12px; align-items:center;">
+                <button type="submit" class="btn btn-primary">Send message</button>
+                <button type="button" id="save-draft" class="btn btn-secondary" style="background:transparent; color:var(--text-light);">Save draft</button>
+                <div id="form-status" aria-live="polite" style="margin-left:12px;"></div>
+              </div>
+            </form>
+
+            <!-- Success / fallback -->
+            <div id="success-card" class="success-card" style="display:none; margin-top:18px;">
+              <h3>Thanks — we received your message</h3>
+              <p>We'll reply within 24 hours. If it's urgent, call us at <a href="tel:+2348012345678">+234 801 234 5678</a>.</p>
+              <button id="send-another" class="btn" style="margin-top:8px;">Send another message</button>
+            </div>
+          </div>
+
+          <!-- Sidebar: contact details + map -->
+          <aside id="visit" style="padding:20px; border-radius:12px; background:#111; color:var(--text-light);">
+            <h3 style="margin-top:0;">Contact Info</h3>
+            <p><strong>Address</strong><br>123 Flex Street, Lagos, Nigeria</p>
+            <p><strong>Phone</strong><br><a href="tel:+2348012345678" style="color:var(--accent)">+234 801 234 5678</a></p>
+            <p><strong>Email</strong><br><a href="mailto:info@flexzonefitness.com" style="color:var(--accent)">info@flexzonefitness.com</a></p>
+
+            <hr style="opacity:.12; margin:14px 0;">
+
+            <h4 style="margin-bottom:8px;">Hours</h4>
+            <ul style="list-style:none; padding:0; margin:0 0 12px 0; color:var(--text-muted)">
+              <li>Mon - Fri: 6:00 AM - 12:00 AM</li>
+              <li>Saturday: 7:00 AM - 10:00 PM</li>
+              <li>Sunday: 8:00 AM - 8:00 PM</li>
+            </ul>
+
+            <div style="margin:12px 0;">
+              <a class="social-icon" href="#" aria-label="Instagram" style="display:inline-block; margin-right:8px;"><i class="fab fa-instagram"></i></a>
+              <a class="social-icon" href="#" aria-label="Facebook" style="display:inline-block; margin-right:8px;"><i class="fab fa-facebook-f"></i></a>
+              <a class="social-icon" href="#" aria-label="YouTube" style="display:inline-block;"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <div style="margin-top:18px;">
+              <h4 style="margin-bottom:8px;">Find us</h4>
+              <!-- Google maps iframe; replace q= with exact place or coords when ready -->
+              <div style="border-radius:10px; overflow:hidden; border:1px solid rgba(255,255,255,0.06)">
+                <iframe
+                  title="FlexZone Fitness location"
+                  src="https://www.google.com/maps?q=Ikeja%20Lagos&output=embed"
+                  width="100%"
+                  height="230"
+                  style="border:0;"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+
+            <div style="margin-top:12px; color:var(--text-muted); font-size:.95rem;">
+              <strong>Tip:</strong> Use the form to request a free tour — mention preferred days/times.
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- small FAQ -->
+    <section style="padding:40px 20px; background:#fafafa;">
+      <div class="container" style="max-width:900px;">
+        <h3>Quick FAQ</h3>
+        <details>
+          <summary>Do you offer free trials?</summary>
+          <p>Yes — 7-day trial available. Use the form to book your trial start date.</p>
+        </details>
+        <details>
+          <summary>Are walk-ins allowed?</summary>
+          <p>Yes; however during peak hours we recommend booking a tour or class in advance.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding:32px 20px; text-align:center; color:var(--text-muted);">
+    <div class="container" style="max-width:1200px;">
+      <p>&copy; 2025 FlexZone Fitness. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Contact form behaviour (client-side)
+    (function () {
+      const form = document.getElementById('contact-form');
+      const statusEl = document.getElementById('form-status');
+      const successCard = document.getElementById('success-card');
+      const sendAnotherBtn = document.getElementById('send-another');
+      const saveDraftBtn = document.getElementById('save-draft');
+
+      // restore draft from localStorage
+      const DRAFT_KEY = 'fz_contact_draft_v1';
+      function loadDraft() {
+        const data = localStorage.getItem(DRAFT_KEY);
+        if (!data) return;
+        try {
+          const obj = JSON.parse(data);
+          Object.keys(obj).forEach(k => {
+            const el = form.elements.namedItem(k);
+            if (el) el.value = obj[k];
+          });
+        } catch (e) {
+          // ignore
+        }
+      }
+      loadDraft();
+
+      function saveDraft() {
+        const obj = {};
+        Array.from(form.elements).forEach(el => {
+          if (!el.name) return;
+          if (el.type === 'file') return;
+          obj[el.name] = el.value;
+        });
+        localStorage.setItem(DRAFT_KEY, JSON.stringify(obj));
+        statusEl.textContent = 'Draft saved locally.';
+        setTimeout(()=> statusEl.textContent = '', 2000);
+      }
+
+      saveDraftBtn.addEventListener('click', saveDraft);
+
+      // simple validation
+      function validate() {
+        let ok = true;
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+
+        // reset errors
+        document.querySelectorAll('.field-error').forEach(el => el.textContent = '');
+
+        if (!name) {
+          document.getElementById('err-name').textContent = 'Please enter your name.';
+          ok = false;
+        }
+        if (!email) {
+          document.getElementById('err-email').textContent = 'Please enter your email.';
+          ok = false;
+        } else {
+          // basic email check
+          const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!re.test(email)) {
+            document.getElementById('err-email').textContent = 'Please enter a valid email.';
+            ok = false;
+          }
+        }
+        if (!message) {
+          document.getElementById('err-message').textContent = 'Please enter a message.';
+          ok = false;
+        }
+        // file size check
+        const f = form.file.files[0];
+        if (f && f.size > 5 * 1024 * 1024) {
+          document.getElementById('err-file').textContent = 'File is too large (max 5MB).';
+          ok = false;
+        }
+        return ok;
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!validate()) return;
+
+        // build a FormData to send to your backend (example)
+        const fd = new FormData(form);
+
+        // show loading
+        statusEl.textContent = 'Sending…';
+        const submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+
+        // MOCK: Replace this fetch URL with your real endpoint when ready
+        // For now we simulate a successful POST with setTimeout
+        setTimeout(() => {
+          // pretend server accepted it
+          statusEl.textContent = '';
+          successCard.style.display = 'block';
+          form.style.display = 'none';
+          submitBtn.disabled = false;
+          // clear draft
+          localStorage.removeItem(DRAFT_KEY);
+        }, 900); // short simulated delay
+
+        // Real example:
+        // fetch('/api/contact', { method: 'POST', body: fd })
+        //   .then(r => r.json())
+        //   .then(resp => { /* handle success */ })
+        //   .catch(err => { /* show error */ });
+      });
+
+      // allow sending another
+      if (sendAnotherBtn) {
+        sendAnotherBtn.addEventListener('click', () => {
+          successCard.style.display = 'none';
+          form.style.display = '';
+          form.reset();
+        });
+      }
+
+      // close nav overlay if open - keep consistent with your nav script (simple)
+      document.addEventListener('click', (e) => {
+        // close nav when clicking outside if nav is open (optional)
+      });
+    })();
+  </script>
+</body>
+</html>
